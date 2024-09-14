@@ -50,8 +50,11 @@ export default function Profile() {
 					</div>
 				</div>
 			</div>
-			<div className={style.lvl}>
-				<div>Уровень</div>
+			<div className={style.lvlDiv}>
+				<p>Уровень 1</p>
+				<div className={style.progressLvl}>
+					<div className={style.lineLvl}></div>
+				</div>
 			</div>
 			<div className={style.achievement}>
 				<div>Достижения</div>

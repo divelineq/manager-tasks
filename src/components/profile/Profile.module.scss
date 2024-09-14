@@ -66,10 +66,22 @@
 			}
 		}
 	}
-	> .lvl {
-		border: 1px solid black;
+	> .lvlDiv {
 		padding: 20px;
 		text-align: center;
+		> .progressLvl {
+			border: 1px solid black;
+			border-radius: 14px;
+			width: 100%;
+			height: 20px;
+			margin-top: 20px;
+			> .lineLvl {
+				border-radius: 14px;
+				height: 100%;
+				width: 80%;
+				background: #7091c2;
+			}
+		}
 	}
 	> .achievement {
 		border: 1px solid black;
