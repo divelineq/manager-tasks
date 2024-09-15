@@ -60,15 +60,50 @@
 	.containerInfoBlock {
 		background: rgb(243 243 251);
 		margin-top: 50px;
+		border-radius: 14px;
 
 		> .infoBlock {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			border-radius: 14px;
 			padding: 40px;
-			text-align: center;
 			gap: 10px;
 			width: 100%;
+			.imgPost {
+				border-radius: 14px;
+			}
+			.infoTextPost {
+				padding-left: 30px;
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				h1 {
+					font-size: 30px;
+					font-weight: bold;
+				}
+				ul {
+					padding-left: 25px;
+					list-style-type: disc;
+					font-weight: bold;
+				}
+				p {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.start {
+		padding: 30px;
+		text-align: center;
+
+		button {
+			color: white;
+			width: 400px;
+			height: 120px;
+			border-radius: 14px;
+			padding: 30px;
+			background: #4654eb;
+			font-size: 34px;
 		}
 	}
 }

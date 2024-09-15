@@ -51,13 +51,32 @@ export default function Profile() {
 				</div>
 			</div>
 			<div className={style.lvlDiv}>
-				<p>Уровень 1</p>
+				<p>Уровень 1 (800 / 1000) </p>
 				<div className={style.progressLvl}>
 					<div className={style.lineLvl}></div>
 				</div>
+				<div className={style.tierLvlUsers}>
+					<p>8 место в организации</p>
+					<p>2 место в группе</p>
+					<p>1 место в направлении</p>
+				</div>
 			</div>
-			<div className={style.achievement}>
-				<div>Достижения</div>
+			<div className={style.achievementContainer}>
+				<div className={style.achivDiv}>
+					<img src='/public/ach.png' alt='icon' />
+					<p>Выполните 5 задач</p>
+					<p>14.11.2024 18:36</p>
+				</div>
+				<div className={style.achivDiv}>
+					<img src='/public/ach.png' alt='icon' />
+					<p>Выполните 25 задач</p>
+					<p>8.12.2024 12:37</p>
+				</div>
+				<div className={style.achivDiv}>
+					<img src='/public/ach.png' alt='icon' />
+					<p>Выполните 100 задач</p>
+					<p>13.9.2024 14:36</p>
+				</div>
 			</div>
 			<EditModal />
 		</div>
