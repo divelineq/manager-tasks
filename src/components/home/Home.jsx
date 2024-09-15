@@ -20,10 +20,10 @@ export default function Home() {
 				<div className={style.rightBlock}>
 					<h1 className='text-3xl'>Добро пожаловать!</h1>
 					<Link className={style.buttons} to='/login'>
-						<button>Login</button>
+						<button>Вход</button>
 					</Link>
-					<Link className={style.buttons} to='/singup'>
-						<button>Sing up</button>
+					<Link className={style.buttons} to='/register'>
+						<button>Регистрация</button>
 					</Link>
 				</div>
 			</div>
