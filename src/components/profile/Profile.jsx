@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleModal } from '../../redux/profile/profileSlice'
+import { toggleModal } from '../../redux/profileSlice'
 import EditModal from './editModal/editModal'
 import style from './Profile.module.scss'
 

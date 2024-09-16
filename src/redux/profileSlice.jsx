@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const state = {
+const profileState = {
 	name: 'Иван',
 	lastname: 'Иванов',
 	email: 'mail@mail.ru',
@@ -11,7 +11,7 @@ const state = {
 
 export const profileSlice = createSlice({
 	name: 'profile',
-	initialState: state,
+	initialState: profileState,
 	reducers: {
 		rename: (state, action) => {
 			state.name = action.payload

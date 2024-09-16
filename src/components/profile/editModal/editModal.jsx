@@ -8,7 +8,7 @@ import {
 	rename,
 	repasswd,
 	toggleModal,
-} from '../../../redux/profile/profileSlice'
+} from '../../../redux/profileSlice'
 
 export default function EditModal() {
 	const profileState = useSelector((state) => state.profile)
