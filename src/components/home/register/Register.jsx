@@ -1,18 +1,20 @@
 import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { setRegister } from '../../../redux/registerSlice'
 import style from './Register.module.scss'
 
 export default function Register() {
-	const { register, handleSubmit, formState } = useForm({
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
+	const goBack = () => navigate(-1)
+	const { register, handleSubmit } = useForm({
 		mode: 'onChange',
 	})
-	const onSubmit = (date) => {
-		console.log(date)
+	const onSubmit = (data) => {
+		dispatch(setRegister(data))
+		goBack()
 	}
-	console.log(formState)
-	const navigate = useNavigate()
-
-	const goBack = () => navigate(-1)
 
 	return (
 		<div className={style.registerContainer}>

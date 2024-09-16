@@ -7,7 +7,6 @@ import WorkTask from './work/WorkTask'
 
 export default function Tasks() {
 	const setActive = ({ isActive }) => (isActive ? 'rounded-lg bg-main' : '')
-
 	return (
 		<div>
 			<div className='flex gap-6 border-b-2'>

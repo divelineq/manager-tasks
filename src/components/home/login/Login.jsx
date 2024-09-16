@@ -1,16 +1,20 @@
 import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { setLogin } from '../../../redux/loginSlice'
 import style from './Login.module.scss'
 
 export default function Register() {
+	const dispatch = useDispatch()
 	const navigate = useNavigate()
 	const goBack = () => navigate(-1)
 
 	const { register, handleSubmit } = useForm({
 		mode: 'onChange',
 	})
-	const onSubmit = (date) => {
-		console.log(date)
+	const onSubmit = (data) => {
+		dispatch(setLogin(data))
+		goBack()
 	}
 
 	return (

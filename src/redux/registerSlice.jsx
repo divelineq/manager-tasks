@@ -11,12 +11,15 @@ export const registerSlice = createSlice({
 	name: 'register',
 	initialState: registerState,
 	reducers: {
-		getRegister: (state, action) => {
-			return [...state, action.payload]
+		setRegister: (state, { payload }) => {
+			state.name = payload.name
+			state.lastname = payload.lastname
+			state.email = payload.email
+			state.password = payload.password
 		},
 	},
 })
 
-export const { getRegister } = registerSlice.actions
+export const { setRegister } = registerSlice.actions
 
 export default registerSlice.reducer
