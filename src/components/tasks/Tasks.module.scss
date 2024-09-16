@@ -1,0 +1,13 @@
+.containerTasks {
+	.navTasks {
+		display: flex;
+		gap: 24px;
+		border-bottom: 2px solid black;
+		.setActive {
+			padding: 15px;
+		}
+	}
+	.tasks {
+		padding: 20px;
+	}
+}

@@ -1,3 +1,7 @@
 export default function ReadyTask() {
-	return <div>ReadyTask</div>
+	return (
+		<div>
+			<p>ready</p>
+		</div>
+	)
 }

@@ -1,3 +1,7 @@
 export default function WorkTask() {
-	return <div>WorkTask</div>
+	return (
+		<div>
+			<p>Work</p>
+		</div>
+	)
 }

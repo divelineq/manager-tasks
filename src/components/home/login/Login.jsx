@@ -3,16 +3,15 @@ import { useNavigate } from 'react-router-dom'
 import style from './Login.module.scss'
 
 export default function Register() {
-	const { register, handleSubmit, formState } = useForm({
+	const navigate = useNavigate()
+	const goBack = () => navigate(-1)
+
+	const { register, handleSubmit } = useForm({
 		mode: 'onChange',
 	})
 	const onSubmit = (date) => {
 		console.log(date)
 	}
-	console.log(formState)
-	const navigate = useNavigate()
-
-	const goBack = () => navigate(-1)
 
 	return (
 		<div className={style.loginContainer}>

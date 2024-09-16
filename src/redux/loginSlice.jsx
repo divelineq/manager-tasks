@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const loginState = {
 	email: null,
 	password: null,
+	bitok: null,
 }
 
 export const loginSlice = createSlice({
@@ -11,6 +12,9 @@ export const loginSlice = createSlice({
 	reducers: {
 		getLogin: (state, action) => {
 			console.log('login sate', state, action)
+		},
+		getBytok: (state, action) => {
+			;[...state, action.payload]
 		},
 	},
 })

@@ -1,3 +1,7 @@
 export default function MakeTask() {
-	return <div>MakeTask</div>
+	return (
+		<div>
+			<p>make</p>
+		</div>
+	)
 }

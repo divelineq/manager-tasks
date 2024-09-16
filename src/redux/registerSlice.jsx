@@ -12,7 +12,7 @@ export const registerSlice = createSlice({
 	initialState: registerState,
 	reducers: {
 		getRegister: (state, action) => {
-			console.log('register', state, action)
+			return [...state, action.payload]
 		},
 	},
 })
