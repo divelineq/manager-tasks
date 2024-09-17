@@ -1,18 +1,52 @@
+import { useSelector } from 'react-redux'
+import style from './Messages.module.scss'
+import Chat from './chat/Chat'
+import Message from './message/Message'
+
 export default function Messages() {
+	const profile = useSelector((state) => state.profile)
+	console.log(profile)
+
 	return (
-		<div className='flex flex-row border h-full'>
-			<div className='w-1/4'>chats</div>
-			<div className='flex flex-col h-full'>
-				<div className='flex flex-row gap-10'>
-					<div>name lastname</div>
-					<div> avatar</div>
+		<div className={style.containerMessages}>
+			<div className={style.messagesChat}>
+				<Chat />
+				<Chat />
+				<Chat />
+				<Chat />
+				<Chat />
+				<Chat />
+				<Chat />
+			</div>
+			<div className={style.messageWindow}>
+				<div className={style.messageWindowTop}>
+					<div className={style.username}>
+						<p>{profile.name}</p>
+						<p>{profile.lastname}</p>
+					</div>
+					<div>
+						<img src='/public/profile.png' alt='avatar' />
+					</div>
 				</div>
-				<div>
-					<div>main</div>
-				</div>
-				<div className='justify-end'>
-					<div>send message</div>
-				</div>
+				<ul className={style.messageMain}>
+					<Message />
+					<Message />
+					<Message />
+					<Message />
+				</ul>
+				<form className={style.messageSend}>
+					<button className={style.moreSend}>
+						<img className={style.imgMore} src='/public/mess.png' alt='mess' />
+					</button>
+					<input
+						className={style.messageSendInput}
+						type='text'
+						placeholder='Новое сообщение'
+					/>
+					<button className={style.messageSendButton}>
+						<img className={style.imgSend} src='/public/send.png' alt='send' />
+					</button>
+				</form>
 			</div>
 		</div>
 	)

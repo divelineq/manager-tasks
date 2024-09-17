@@ -1,0 +1,68 @@
+.containerMessages {
+	display: flex;
+	flex-direction: row;
+
+	.messagesChat {
+		width: 20%;
+		height: 95vh;
+		border-right: 1px solid grey;
+	}
+	.messageWindow {
+		width: 80%;
+		img {
+			width: 5vh;
+		}
+		.messageMain {
+			display: flex;
+			flex-direction: column;
+		}
+		.messageWindowTop {
+			padding: 15px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			height: 7vh;
+			border-bottom: 1px solid grey;
+			.username {
+				display: flex;
+				flex-direction: row;
+				gap: 15px;
+			}
+		}
+		.messageMain {
+			height: 81vh;
+		}
+		.messageSend {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			justify-content: space-between;
+			padding: 15px;
+			border-top: 1px solid grey;
+			height: 7vh;
+			align-items: center;
+			.moreSend {
+				.imgMore {
+					width: 3vh;
+				}
+			}
+			.messageSendInput {
+				outline: none;
+				border-radius: 14px;
+				padding: 10px;
+				height: 100%;
+				width: 80%;
+			}
+			.messageSendInput:focus {
+				border: 2px solid #4654eb;
+				transition: border-color 0.3 ease;
+			}
+			.messageSendButton {
+				.imgSend {
+					width: 3vh;
+				}
+			}
+		}
+	}
+}

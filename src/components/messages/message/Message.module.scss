@@ -1,0 +1,14 @@
+.containerMessage {
+	display: inline-block;
+	border-radius: 14px;
+	min-height: 3vh;
+	padding: 8px;
+	margin: 10px;
+	background: #d5d5eb;
+	.username {
+		font-weight: bold;
+	}
+	p {
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,20 @@
+.containerChat {
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+	padding: 10px;
+	.imgChat {
+		width: 4vh;
+		height: 4vh;
+	}
+	.divChatMes {
+		.pName {
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.pMessage {
+			font-size: 13px;
+			color: grey;
+		}
+	}
+}
