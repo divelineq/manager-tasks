@@ -13,9 +13,6 @@ export default function Home() {
 					<p className={style.iconText}>
 						Мощный инструмент <br /> для эффективного <br /> менеджмента
 					</p>
-					<Link className={style.buttonAccount} to='/account'>
-						<button>go to account</button>
-					</Link>
 				</div>
 				<div className={style.rightBlock}>
 					<h1 className='text-3xl'>Добро пожаловать!</h1>
