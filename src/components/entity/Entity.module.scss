@@ -1,0 +1,42 @@
+.containerEntity {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	.iconImg {
+		width: 250px;
+		padding: 25px;
+		img {
+			border-radius: 14px;
+		}
+	}
+	.rightBlock {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		.topBlock {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 25px;
+			p {
+				font-size: 30px;
+			}
+		}
+		.mainInfo {
+			padding: 25px;
+			font-size: 28px;
+			font-weight: 300;
+			height: 75vh;
+		}
+	}
+	.footerInfo {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		font-size: 30px;
+		font-weight: 300;
+		p {
+			padding: 15px;
+		}
+	}
+}
