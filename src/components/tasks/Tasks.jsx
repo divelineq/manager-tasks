@@ -3,27 +3,19 @@ import NotFound from '../notFound/NotFound'
 import AddTask from './add/AddTask'
 import MakeTask from './make/MakeTask'
 import ReadyTask from './ready/ReadyTask'
+import style from './Tasks.module.scss'
 import WorkTask from './work/WorkTask'
 
 export default function Tasks() {
-	const setActive = ({ isActive }) => (isActive ? 'rounded-lg bg-main' : '')
 	return (
-		<div>
-			<div className='flex gap-6 border-b-2'>
-				<Link className={setActive} to=''>
-					Сделать
-				</Link>
-				<NavLink className={setActive} to='work'>
-					В работе
-				</NavLink>
-				<NavLink className={setActive} to='ready'>
-					Готовые
-				</NavLink>
-				<NavLink className={setActive} to='add'>
-					Добавить
-				</NavLink>
+		<div className={style.containerTask}>
+			<div className={style.navTasks}>
+				<Link to=''>Сделать</Link>
+				<NavLink to='work'>В работе</NavLink>
+				<NavLink to='ready'>Готовые</NavLink>
+				<NavLink to='add'>Добавить</NavLink>
 			</div>
-			<div>
+			<div className={style.tasksDiv}>
 				<Routes>
 					{/* <Route index element={<div>Task manager info </div>} /> */}
 					<Route index element={<MakeTask />} />

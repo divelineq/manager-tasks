@@ -1,7 +1,7 @@
 export default function WorkTask() {
 	return (
 		<div>
-			<p>Work</p>
+			<p>Задачи в процессе работы</p>
 		</div>
 	)
 }

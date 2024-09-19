@@ -1,7 +1,7 @@
 export default function AddTask() {
 	return (
 		<div>
-			<p>Add task</p>
+			<p>Добавить задачу</p>
 		</div>
 	)
 }

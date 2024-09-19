@@ -1,7 +1,7 @@
 export default function ReadyTask() {
 	return (
 		<div>
-			<p>ready</p>
+			<p>Выполненные задачи</p>
 		</div>
 	)
 }

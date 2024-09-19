@@ -1,7 +1,7 @@
 export default function MakeTask() {
 	return (
 		<div>
-			<p>make</p>
+			<p>Сделать задачу</p>
 		</div>
 	)
 }
