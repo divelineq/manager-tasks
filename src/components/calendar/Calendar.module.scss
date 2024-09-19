@@ -1,0 +1,27 @@
+.containerCalendar {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	.soloDate {
+		display: grid;
+		grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+		text-align: center;
+		height: 70vh;
+		width: 100%;
+		align-items: start;
+		padding-top: 40px;
+		word-break: break-all;
+		gap: 15px;
+		.buttonNav {
+			img {
+				width: 2vh;
+			}
+		}
+	}
+	.dateTasks {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
