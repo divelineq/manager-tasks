@@ -13,24 +13,22 @@ export default function Profile() {
 			<div className={style.infoProfile}>
 				<div className={style.leftInfoProfile}>
 					<div className={style.imgProfile}>
+						{profileState.online ? (
+							<div className={style.online}>●</div>
+						) : (
+							<div className={style.offline}>●</div>
+						)}
 						<img src='/public/profile.png' alt='icon' />
 					</div>
 					<div className={style.mainInfo}>
 						<p>{profileState.email}</p>
 						<p>Организация</p>
-						<p>Группа</p>
-						{profileState.online ? (
-							<div className={style.online}>online</div>
-						) : (
-							<div className={style.offline}>offline</div>
-						)}
 					</div>
 				</div>
 				<div className={style.rightInfoProfile}>
 					<div className={style.topRightInfo}>
 						<div>
-							<p>{profileState.name}</p>
-							<p>{profileState.lastname}</p>
+							<p>{profileState.name} {profileState.lastname}</p>
 						</div>
 						<div>
 							<button onClick={() => dispatch(toggleModal())}>
@@ -38,11 +36,21 @@ export default function Profile() {
 							</button>
 						</div>
 					</div>
+					<hr className={style.horizontalLine}></hr>
 					<div className={style.bottomRightInfo}>
-						<div>
-							<div>Должность: frontend developer</div>
-							<div>День рождения: 01.02.2000</div>
-							<div>Дата регистрации: 04.09.2024</div>
+						<div className={style.info}>
+							<ul className={style.titles}>
+								<li>Группа:</li>
+								<li>Должность:</li>
+								<li>День рождения:</li>
+								<li>Дата регистрации:</li>
+							</ul>
+							<ul className={style.values}>
+								<li>Веб-разработка</li>
+								<li>frontend developer</li>
+								<li>01.02.2000</li>
+								<li>04.09.2024</li>
+							</ul>
 						</div>
 						<div>
 							<div>График</div>
@@ -63,19 +71,28 @@ export default function Profile() {
 			</div>
 			<div className={style.achievementContainer}>
 				<div className={style.achivDiv}>
-					<img src='/public/ach.png' alt='icon' />
-					<p>Выполните 5 задач</p>
+					<div className={style.info}>
+						<img src='/public/ach.png' alt='icon' />
+						<p>5 выполненных задач</p>
+						<p>Выполните 5 задач</p>
+					</div>
 					<p>14.11.2024 18:36</p>
 				</div>
 				<div className={style.achivDiv}>
-					<img src='/public/ach.png' alt='icon' />
-					<p>Выполните 25 задач</p>
-					<p>8.12.2024 12:37</p>
+					<div className={style.info}>
+						<img src='/public/ach.png' alt='icon' />
+						<p>25 выполненных задач</p>
+						<p>Выполните 25 задач</p>
+					</div>
+					<p>14.11.2024 18:36</p>
 				</div>
 				<div className={style.achivDiv}>
-					<img src='/public/ach.png' alt='icon' />
-					<p>Выполните 100 задач</p>
-					<p>13.9.2024 14:36</p>
+					<div className={style.info}>
+						<img src='/public/ach.png' alt='icon' />
+						<p>50 выполненных задач</p>
+						<p>Выполните 50 задач</p>
+					</div>
+					<p>14.11.2024 18:36</p>
 				</div>
 			</div>
 			<EditModal />
