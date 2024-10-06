@@ -1,11 +1,12 @@
 .container {
 	justify-content: center;
-	padding: 140px;
 	.autorizeDiv {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		border-radius: 8px;
+		padding: 140px 140px 380px 140px;
+		background-image: url("../../../public/home.png");
+		background-size: 80%;
 		> .leftBlock {
 			text-align: center;
 			padding: 10px;
@@ -13,19 +14,24 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				gap: 12px;
 				> img {
 					width: 80px;
 				}
 				> p {
+					letter-spacing: 0.05em;
 					font-size: 36px;
 					font-weight: 800;
+					cursor: default;
 				}
 			}
 			> .iconText {
 				font-size: 28px;
 				padding-top: 22px;
 				line-height: 28px;
-				font-weight: 500;
+				letter-spacing: 0.05em;
+				font-weight: 600;
+				cursor: default;
 			}
 			> .buttonAccoint {
 				padding: 20px;
@@ -35,39 +41,43 @@
 		> .rightBlock {
 			display: flex;
 			flex-direction: column;
-			padding: 40px;
+			padding: 60px 40px 60px 40px;
 			gap: 50px;
 			text-align: center;
 			background: #f3f3fb;
-			border-radius: 24px;
-
+			border-radius: 45px;
+			cursor: default;
 			.buttons {
 				display: flex;
 				justify-content: center;
 				width: 400px;
 				height: 100px;
-				background: rgb(88 128 188);
+				background: #7091C2;
 				outline: none;
 				border-radius: 24px;
 				font-size: 24px;
+				font-weight: 700;
+				letter-spacing: 0.05em;
 				color: white;
 			}
 			.buttons:hover {
-				background: #4654eb;
+				background: #5880BC;
 				color: white;
+				box-shadow: 0 0 6px #5880BC;
+				transition: ease-in-out 0.2s;
 			}
 		}
 	}
 	.containerInfoBlock {
 		background: rgb(243 243 251);
-		margin-top: 50px;
-		border-radius: 14px;
-
+		margin-top: -220px;
+		border-radius: 220px 220px 0 0;
+		cursor: default;
 		> .infoBlock {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			border-radius: 14px;
-			padding: 40px;
+			padding: 100px 115px 0px 115px;
 			gap: 10px;
 			width: 100%;
 			.imgPost {
@@ -85,26 +95,31 @@
 				ul {
 					padding-left: 25px;
 					list-style-type: disc;
-					font-weight: bold;
+					font-weight: 500;
 				}
 				p {
-					font-weight: bold;
+					font-weight: 500;
 				}
 			}
 		}
 	}
 	.start {
-		padding: 30px;
+		padding: 60px;
 		text-align: center;
 
 		button {
+			text-align: center;
 			color: white;
-			width: 400px;
-			height: 120px;
+			width: 300px;
+			height: 80px;
 			border-radius: 14px;
-			padding: 30px;
-			background: #4654eb;
+			background: #7091C2;
 			font-size: 34px;
 		}
+		button:hover {
+            background: #5880BC;
+			box-shadow: 0 0px 6px #5880BC;
+			transition: ease-in-out 0.2s;
+        }
 	}
 }

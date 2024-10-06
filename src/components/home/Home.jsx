@@ -7,7 +7,7 @@ export default function Home() {
 			<div className={style.autorizeDiv}>
 				<div className={style.leftBlock}>
 					<div className={style.iconDiv}>
-						<img src='../../../public/favicon.svg' alt='icon' />
+						<img src='../../../public/icon.png' alt='icon' />
 						<p>Manager Tasks</p>
 					</div>
 					<p className={style.iconText}>
@@ -15,7 +15,7 @@ export default function Home() {
 					</p>
 				</div>
 				<div className={style.rightBlock}>
-					<h1 className='text-3xl'>Добро пожаловать!</h1>
+					<h1 className='text-3xl font-bold tracking-wider'>Добро пожаловать!</h1>
 					<Link className={style.buttons} to='/login'>
 						<button>Вход</button>
 					</Link>
@@ -72,13 +72,13 @@ export default function Home() {
 							карьере!
 						</p>
 					</div>
-					<img className={style.imgPost} src='' alt='video' />
+					<img className={style.imgPost} src='/public/1post.png' alt='video' />
 				</div>
-			</div>
-			<div className={style.start}>
-				<Link className={style.buttonAccount} to='/account'>
-					<button>Начать</button>
-				</Link>
+				<div className={style.start}>
+					<Link className={style.buttonAccount} to='/account/profile'>
+						<button>Начать</button>
+					</Link>
+				</div>
 			</div>
 		</div>
 	)
