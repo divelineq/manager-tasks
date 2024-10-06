@@ -9,7 +9,7 @@ export default function NavBlock() {
 	return (
 		<div className='grid grid-rows-6'>
 			<div className='flex items-center gap-4 p-5'>
-				<img className='w-1/5' src='/public/favicon.svg' alt='icon' />
+				<img className='w-1/5' src='/public/icon.png' alt='icon' />
 				<p className=' text-2xl'>Manager Tasks</p>
 			</div>
 			<NavLink className={setActive} to='profile'>
