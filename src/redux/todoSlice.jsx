@@ -11,10 +11,13 @@ export const todoSlice = createSlice({
 			state.text = action.payload
 		},
 		addTodo: (state, action) => {
-			state.todos.push(action.payload)
+			state.todos.push({
+				title: action.payload,
+				isComlite: false,
+				id: new Date().getTime(),
+			})
+			state.text = ''
 		},
-		// removeTodo: (state, action) => {},
-		// toggleTodo: (state, action) => {},
 	},
 })
 

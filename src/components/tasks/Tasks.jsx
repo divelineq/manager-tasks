@@ -29,13 +29,21 @@ export default function Tasks() {
 					<Route path='add' element={<AddTask />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
-				<input
-					type='text'
-					value={text}
-					placeholder='Введите текст'
-					onChange={(e) => dispatch(todoText(e.target.value))}
-				/>
-				<button onClick={() => dispatch(addTodo(text))}>Отправить</button>
+				<div className={style.addTasks}>
+					<input
+						className={style.inputTasks}
+						type='text'
+						value={text}
+						placeholder='Введите текст'
+						onChange={(e) => dispatch(todoText(e.target.value))}
+					/>
+					<button
+						className={style.butTasks}
+						onClick={() => dispatch(addTodo(text))}
+					>
+						Отправить
+					</button>
+				</div>
 			</div>
 		</div>
 	)

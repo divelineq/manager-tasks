@@ -1,12 +1,14 @@
 import { useSelector } from 'react-redux'
+import style from './Make.module.scss'
 
 export default function MakeTask() {
 	const todos = useSelector((state) => state.todo.todos)
-	console.log(todos)
 	return (
-		<div>
+		<div className={style.makeTasks}>
 			{todos.map((el) => (
-				<div key={el.key}>{el}</div>
+				<div className={style.task} key={el.id}>
+					{el.title}
+				</div>
 			))}
 		</div>
 	)
