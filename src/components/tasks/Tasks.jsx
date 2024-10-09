@@ -41,7 +41,7 @@ export default function Tasks() {
 						className={style.butTasks}
 						onClick={() => dispatch(addTodo(text))}
 					>
-						Отправить
+						Добавить
 					</button>
 				</div>
 			</div>
