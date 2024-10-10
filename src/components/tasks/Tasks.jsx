@@ -1,6 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink, Route, Routes } from 'react-router-dom'
-import { addTodo, todoText } from '../../redux/todoSlice'
 import NotFound from '../notFound/NotFound'
 import AddTask from './add/AddTask'
 import MakeTask from './make/MakeTask'
@@ -9,9 +7,6 @@ import style from './Tasks.module.scss'
 import WorkTask from './work/WorkTask'
 
 export default function Tasks() {
-	const text = useSelector((state) => state.todo.text)
-
-	const dispatch = useDispatch()
 	return (
 		<div className={style.containerTask}>
 			<div className={style.navTasks}>
@@ -22,28 +17,12 @@ export default function Tasks() {
 			</div>
 			<div className={style.tasksDiv}>
 				<Routes>
-					{/* <Route index element={<div>Task manager info </div>} /> */}
 					<Route index element={<MakeTask />} />
 					<Route path='work' element={<WorkTask />} />
 					<Route path='ready' element={<ReadyTask />} />
 					<Route path='add' element={<AddTask />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
-				<div className={style.addTasks}>
-					<input
-						className={style.inputTasks}
-						type='text'
-						value={text}
-						placeholder='Введите текст'
-						onChange={(e) => dispatch(todoText(e.target.value))}
-					/>
-					<button
-						className={style.butTasks}
-						onClick={() => dispatch(addTodo(text))}
-					>
-						Добавить
-					</button>
-				</div>
 			</div>
 		</div>
 	)

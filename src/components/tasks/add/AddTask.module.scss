@@ -1,0 +1,34 @@
+.containerAddTask {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	.header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.priority {
+			display: flex;
+			gap: 10px;
+		}
+	}
+	.nameTask {
+		width: 100%;
+		padding: 20px 0 20px 0;
+		> input {
+			width: 100%;
+			height: 6vh;
+			padding: 30px;
+			border-radius: 8px;
+		}
+	}
+	.descriptionTask {
+		width: 100%;
+
+		> input {
+			width: 100%;
+			height: 55vh;
+			padding: 30px;
+			border-radius: 8px;
+		}
+	}
+}
