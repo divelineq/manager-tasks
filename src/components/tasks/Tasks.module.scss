@@ -2,13 +2,18 @@
 	padding: 25px;
 	.navTasks {
 		display: flex;
+		flex-flow: row wrap;
 		padding: 25px;
 		gap: 30px;
+		.addTask {
+			margin-left: auto;
+			background-color: rgb(88 128 188);
+			color: white;
+		}
 		a {
 			padding: 10px;
 			border-radius: 14px;
-			background: rgb(88 128 188);
-			color: white;
+			border: 2px solid rgb(88 128 188);
 		}
 	}
 	.tasksDiv {

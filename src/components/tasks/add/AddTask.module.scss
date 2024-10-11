@@ -6,9 +6,16 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+		padding: 8px;
 		.priority {
 			display: flex;
 			gap: 10px;
+			align-items: center;
+			select {
+				padding: 5px;
+				border-radius: 8px;
+			}
 		}
 	}
 	.nameTask {

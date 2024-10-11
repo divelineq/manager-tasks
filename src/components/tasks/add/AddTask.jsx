@@ -1,29 +1,34 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addTodo, todoText } from '../../../redux/todoSlice'
+import { addTodo } from '../../../redux/todoSlice'
 import style from './AddTask.module.scss'
 
 export default function AddTask() {
-	const text = useSelector((state) => state.todo.text)
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
 
-	const addTodoTask = () => {
-		dispatch(addTodo(text))
+	const { register, handleSubmit } = useForm({
+		mode: 'onChange',
+	})
+
+	const onSubmit = (data) => {
+		dispatch(addTodo(data))
+
 		navigate('/account/tasks')
 	}
 
 	return (
-		<div className={style.containerAddTask}>
+		<form className={style.containerAddTask}>
 			<div className={style.header}>
 				<p>Добавить задачу</p>
 				<div className={style.priority}>
 					<p>Выберите приоритет:</p>
 					<select
 						name='priority'
-						onChange={(e) => {
-							console.log(e.target.value)
-						}}
+						{...register('priority', {
+							required: true,
+						})}
 					>
 						<option value='easy'>Низкий</option>
 						<option value='medium'>Средний</option>
@@ -35,19 +40,26 @@ export default function AddTask() {
 				<div>Дата</div>
 			</div>
 			<div className={style.nameTask}>
-				<input type='text' placeholder='Название' />
+				<input
+					{...register('nameTask', {
+						required: 'Название обязательно',
+					})}
+					type='text'
+					placeholder='Название'
+				/>
 			</div>
 			<div className={style.descriptionTask}>
 				<input
+					{...register('descriptionTask', {
+						required: 'Описание обязательно',
+					})}
 					type='text'
-					value={text}
 					placeholder='Введите текст'
-					onChange={(e) => dispatch(todoText(e.target.value))}
 				/>
 			</div>
 			<div className={style.buttonAddTask}>
-				<button onClick={() => addTodoTask()}>Добавить</button>
+				<button onClick={handleSubmit(onSubmit)}>Добавить</button>
 			</div>
-		</div>
+		</form>
 	)
 }

@@ -1,4 +1,4 @@
-import { Link, NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom'
 import NotFound from '../notFound/NotFound'
 import AddTask from './add/AddTask'
 import MakeTask from './make/MakeTask'
@@ -7,13 +7,18 @@ import style from './Tasks.module.scss'
 import WorkTask from './work/WorkTask'
 
 export default function Tasks() {
+	// const isComplite = () => {
+	// 	if()
+	// }
 	return (
 		<div className={style.containerTask}>
 			<div className={style.navTasks}>
-				<Link to=''>Сделать</Link>
+				<NavLink to=''>Сделать</NavLink>
 				<NavLink to='work'>В работе</NavLink>
 				<NavLink to='ready'>Готовые</NavLink>
-				<NavLink to='add'>+</NavLink>
+				<NavLink className={style.addTask} to='add'>
+					Добавить задачу
+				</NavLink>
 			</div>
 			<div className={style.tasksDiv}>
 				<Routes>
