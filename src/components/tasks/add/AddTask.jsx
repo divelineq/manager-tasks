@@ -30,10 +30,10 @@ export default function AddTask() {
 							required: true,
 						})}
 					>
-						<option value='easy'>Низкий</option>
-						<option value='medium'>Средний</option>
-						<option value='hard'>Высокий</option>
-						<option value='veryHard'>Наивысший</option>
+						<option value='Низкий'>Низкий</option>
+						<option value='Средний'>Средний</option>
+						<option value='Высокий'>Высокий</option>
+						<option value='Наивысший'>Наивысший</option>
 					</select>
 				</div>
 
