@@ -4,12 +4,12 @@ export default function Entity() {
 	return (
 		<div className={style.containerEntity}>
 			<div className={style.iconImg}>
-				<img src='/public/iconEntity.jpg' alt='icon' />
+				<img src='/public/iconEntity.webp' alt='icon' />
 			</div>
 			<div className={style.rightBlock}>
 				<div className={style.topBlock}>
-					<p>Наименование </p>
-					<p>Руководитель: Имя руководителя</p>
+					<p>Наименование</p>
+					<p>Руководитель: Имя Фамилия</p>
 				</div>
 				<div className={style.mainInfo}>
 					<p>
@@ -32,11 +32,6 @@ export default function Entity() {
 				<div className={style.footerInfo}>
 					<div>
 						<p>Дата регистрации: 23.03.2016</p>
-						<p>ИП наименование: ООО Инфотех</p>
-					</div>
-					<div>
-						<p>ИНН организации: 7736509061</p>
-						<p>ОГРН: 1027700132195</p>
 					</div>
 				</div>
 			</div>
