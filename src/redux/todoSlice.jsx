@@ -5,6 +5,8 @@ export const todoSlice = createSlice({
 	initialState: {
 		priority: null,
 		todos: [],
+		workTodos: [],
+		successTodos: [],
 	},
 	reducers: {
 		addTodo: (state, action) => {
@@ -25,8 +27,11 @@ export const todoSlice = createSlice({
 		priority: (state, action) => {
 			state.priority = action.payload
 		},
+		workTodo: (state, action) => {
+			state.workTodos = action.payload
+		},
 	},
 })
 
-export const { addTodo, priority } = todoSlice.actions
+export const { addTodo, priority, workTodo } = todoSlice.actions
 export default todoSlice.reducer

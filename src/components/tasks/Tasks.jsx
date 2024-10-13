@@ -1,4 +1,6 @@
+import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, Route, Routes } from 'react-router-dom'
+import { workTodo } from '../../redux/todoSlice'
 import NotFound from '../notFound/NotFound'
 import AddTask from './add/AddTask'
 import MakeTask from './make/MakeTask'
@@ -7,14 +9,22 @@ import style from './Tasks.module.scss'
 import WorkTask from './work/WorkTask'
 
 export default function Tasks() {
-	// const isComplite = () => {
-	// 	if()
-	// }
+	const todos = useSelector((state) => state.todo.todos)
+	const dispatch = useDispatch()
+	console.log(todos)
+	function todoFilter(status) {
+		if (status == 'work') {
+			const workTodos = todos.filter((el) => el.work === true)
+			dispatch(workTodo(workTodos))
+		}
+	}
 	return (
 		<div className={style.containerTask}>
 			<div className={style.navTasks}>
 				<NavLink to=''>Сделать</NavLink>
-				<NavLink to='work'>В работе</NavLink>
+				<NavLink to='work' onClick={() => todoFilter('work')}>
+					В работе
+				</NavLink>
 				<NavLink to='ready'>Готовые</NavLink>
 				<NavLink className={style.addTask} to='add'>
 					Добавить задачу

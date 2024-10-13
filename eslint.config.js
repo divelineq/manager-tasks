@@ -8,6 +8,9 @@ export default [
 	{ ignores: ['dist'] },
 	{
 		files: ['**/*.{js,jsx}'],
+		linterOptions: {
+			reportUnusedDisableDirectives: 'error',
+		},
 		languageOptions: {
 			ecmaVersion: 2020,
 			globals: globals.browser,
@@ -17,6 +20,7 @@ export default [
 				sourceType: 'module',
 			},
 		},
+
 		settings: { react: { version: '18.3' } },
 		plugins: {
 			react,
