@@ -1,19 +1,12 @@
-import { useEffect } from 'react'
 import {
 	AiOutlineBranches,
 	AiOutlineCheck,
 	AiOutlineEdit,
 } from 'react-icons/ai'
 import { CiTrash } from 'react-icons/ci'
-import { useDispatch } from 'react-redux'
-import { addTodo } from '../../redux/todoSlice'
 import style from './ItemTask.module.scss'
 
 export default function ItemTask({ todos }) {
-	const dispatch = useDispatch()
-	useEffect(() => {
-		dispatch(addTodo(todos))
-	}, [])
 	return (
 		<div className={style.makeTasks}>
 			<div className={style.task}>

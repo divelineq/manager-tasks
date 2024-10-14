@@ -5,7 +5,7 @@ export const todoSlice = createSlice({
 	initialState: {
 		priority: null,
 		todos: [],
-		oneTodo: {},
+		oneTodo: null,
 		workTodos: [],
 		readyTodos: [],
 	},
@@ -16,7 +16,6 @@ export const todoSlice = createSlice({
 				ready: false,
 				make: true,
 				title: action.payload,
-				isComlite: false,
 				id: new Date().getTime(),
 				date: {
 					day: new Date().getDay(),
@@ -26,7 +25,7 @@ export const todoSlice = createSlice({
 			})
 		},
 		addTodo: (state, action) => {
-			state.oneTodo = action.payload
+			state.oneTodo.push(action.payload)
 		},
 		priority: (state, action) => {
 			state.priority = action.payload
