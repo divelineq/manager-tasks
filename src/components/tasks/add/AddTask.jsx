@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addTodo } from '../../../redux/todoSlice'
+import { addTodos } from '../../../redux/todoSlice'
 import style from './AddTask.module.scss'
 
 export default function AddTask() {
@@ -13,8 +13,7 @@ export default function AddTask() {
 	})
 
 	const onSubmit = (data) => {
-		dispatch(addTodo(data))
-
+		dispatch(addTodos(data))
 		navigate('/account/tasks')
 	}
 
@@ -36,7 +35,6 @@ export default function AddTask() {
 						<option value='Наивысший'>Наивысший</option>
 					</select>
 				</div>
-
 				<div>Дата</div>
 			</div>
 			<div className={style.nameTask}>

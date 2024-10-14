@@ -11,11 +11,14 @@ import WorkTask from './work/WorkTask'
 export default function Tasks() {
 	const todos = useSelector((state) => state.todo.todos)
 	const dispatch = useDispatch()
-	console.log(todos)
+
 	function todoFilter(status) {
 		if (status == 'work') {
 			const workTodos = todos.filter((el) => el.work === true)
 			dispatch(workTodo(workTodos))
+		} else if (status == 'success') {
+			const readyTodos = todos.filter((el) => el.work === true)
+			dispatch(readyTodos(readyTodos))
 		}
 	}
 	return (
